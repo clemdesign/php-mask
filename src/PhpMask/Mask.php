@@ -256,7 +256,6 @@ class Mask
           isset(Mask::$maskAvailablePatterns[$maskCursor]["optional"]) &&
           Mask::$maskAvailablePatterns[$maskCursor]["optional"] == true
         ) {
-          var_dump("ici");
           $cursor++;
           $i--;
         } elseif ($maskCursorP1 === '*' &&
@@ -409,7 +408,7 @@ class Mask
       if($pos) {
         $decimal = substr($inputValue, $pos, $precision + 1);
       }
-      $inputValue = substr($inputValue, 0, $pos) . $decimal;
+      $inputValue = substr($inputValue, 0, $pos) . ($decimal === "." ? "" : $decimal);
     }
 
     return $inputValue;
