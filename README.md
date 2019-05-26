@@ -113,6 +113,18 @@ $output = \Clemdesign\PhpMask\Mask::apply("0102030405", "00 00 00 00 00", array(
 
 ```
 
+## Examples
+
+| Input               | Mask           | Output           |
+| ------------------- | -------------- | ---------------- |
+| Date is 20190526    | 9999-99-99     | 2019-05-26       |
+| Month is 20190526   | 0*.00          | 2019.05          |
+| 04845798798         | 000.000.000-99 | 048.457.987-98   |
+| 048457987           | 000.000.000-99 | 048.457.987-     |
+| 0F6.g-lm            | AAAA           | 0F6g             |
+| a036s.D2F           | SSSS           | asDF             |
+
+
 ## Contributing
 
 If you think any implementation are just not the best, feel free to submit ideas and pull requests. All your comments and suggestion are welcome.
