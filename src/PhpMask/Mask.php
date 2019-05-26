@@ -114,8 +114,6 @@ class Mask
       ) {
         $inputValue = Mask::_checkInput($inputValue);
       }
-      $precision = Mask::_getPrecision($maskExpression);
-      if($precision === false) $precision = 0;
 
       if (Mask::_startsWith($maskExpression, 'separator')) {
         if (
@@ -140,6 +138,11 @@ class Mask
         $inputValue = strlen($inputValue) > 1 && substr($inputValue, 0, 1) === '0' && substr($inputValue, 1, 1) !== '.'
           ? substr($inputValue, 1)
           : $inputValue;
+      }
+
+      $precision = Mask::_getPrecision($maskExpression);
+      if($precision === null) {
+        $precision = strlen(substr($inputValue, strrpos($inputValue, ".")+1));
       }
 
       $inputValue = floatval($inputValue);
