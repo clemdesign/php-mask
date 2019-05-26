@@ -1,0 +1,15 @@
+{
+    "name": "clemdesign/php-mask",
+    "description": "PHP-Mask is a PHP library to make masks on string.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clement G.",
+            "email": "contact@clemdesign.fr"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
