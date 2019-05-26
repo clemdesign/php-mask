@@ -5,7 +5,9 @@ It is an adapation of [ngx-mask](https://github.com/JsDaddy/ngx-mask) by  [JsDad
 
 ## Installation
 
-To do.
+PHP-Mask is available on composer:
+
+    composer require clemdesign/php-mask
 
 ## Usage
 
